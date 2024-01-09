@@ -1,14 +1,18 @@
 package com.learnjpaandjdbc.demo.course.repository;
 
-public class Course {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity public class Course {
 
     public Course() {
 
     }
 
-    private int id;
-    private String name;
-    private String author;
+    @Id private int id;
+    @Column private String name;
+    @Column private String author;
 
     public int getId() {
         return id;
@@ -34,7 +38,7 @@ public class Course {
         this.author = author;
     }
 
-    Course(int id, String name, String author) {
+    public Course(int id, String name, String author) {
         this.id = id;
         this.name = name;
         this.author = author;

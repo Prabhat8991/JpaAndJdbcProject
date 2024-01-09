@@ -1,5 +1,8 @@
-package com.learnjpaandjdbc.demo.course.repository;
+package com.learnjpaandjdbc.demo;
 
+import com.learnjpaandjdbc.demo.course.repository.Course;
+import com.learnjpaandjdbc.demo.course.repository.CourseJdbcRepository;
+import com.learnjpaandjdbc.demo.course.repository.CourseJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -7,8 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseCommandLineRunner implements CommandLineRunner {
 
+//    @Autowired
+//    private CourseJdbcRepository courseJdbcRepository;
+
+
     @Autowired
-    private CourseJdbcRepository courseJdbcRepository;
+    private CourseJpaRepository courseJdbcRepository;
 
     @Override
     public void run(String... args) throws Exception {
